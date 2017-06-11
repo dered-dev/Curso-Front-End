@@ -1,0 +1,81 @@
+body{
+	background-color: whitesmoke;
+	padding-bottom: 100em;
+	font-family: sans-serif;
+}
+
+.contenedor{
+	border: 2px dashed blue;
+	width: 500px;
+	height: 400px;
+	font-size: 20px;
+	padding: 50px;
+	position: relative;
+	top: 100px;
+}
+/*
+	Se considera un elemento posicionado si y solo sí
+	Su propiedad position tiene los valores:
+	Position: relative || absolute || fixed || sticky;
+	Todos los elementos se consideran inicialmente
+	con position: static, pero no estan posicionados
+	Valores adicionales posibles:
+	position: initial || inherit;
+*/
+
+/*	
+	RELATIVE
+	sus coordenadas t,r,b,l se calculan respecto
+	a su posicion original en el flujo
+*/
+.contenedor .rel{
+	background-color: green;
+	width: 80px;
+	height: 80px;
+	font-size: 1em;
+	line-height: 4em;
+	text-align: center;
+	border-radius: 5px;
+
+	position: relative;
+	top: 10px;
+	left: 200px;
+}
+/***
+	ABSOLUTE
+	se calcula desde su ancestro más cercano
+	que esté posicionado
+***/
+.contenedor .abs{
+	background-color: yellow;
+	width: 80px;
+	height: 80px;
+	font-size: 1em;
+	line-height: 4em;
+	text-align: center;
+	border-radius: 5px;
+
+	position: absolute;
+	top: 40px;
+	right: 0;
+}
+/***
+	FIXED
+	se calcula desde el viewport del navegador
+***/
+.contenedor .fix{
+	background-color: blueviolet;
+	width: 80px;
+	height: 80px;
+	font-size: 1em;
+	line-height: 4em;
+	text-align: center;
+	border-radius: 5px;
+
+	position: fixed;
+	top: 40px;
+	right: 0;
+}
+
+
+

@@ -1,0 +1,122 @@
+html{
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.punto{
+
+	width: 100px;
+	height: 100px;
+
+	border-radius: 50px;
+
+	position: fixed;
+
+	left: 30px;
+	bottom: 30px;
+	right: 0;
+	top: 0;
+	margin: auto;
+	background-image: url('http://www.encuentos.com/wp-content/uploads/2016/10/la-rana.gif');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 15px 30px;
+	text-align: right;
+}
+.header .logo {
+	width: 100px;
+	display: inline-block;
+	float: left;
+}
+.header .menu{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 70px;
+}
+.header .menu li {
+ 	display: inline-block;
+ 	color: #fff;
+ 	font-size: 30px;
+ 	font-weight: 300;
+	margin-left: 15px;
+	cursor: pointer;
+	-webkit-transition: all linear 5s;
+	-o-transition: all linear 5s;
+	transition: all linear 5s;
+}
+.header .menu li:hover{
+	color: red;
+}
+
+/* contenido */
+
+.contenido {
+	max-width: 1024px;
+	width: 100%;
+	display: block;
+	margin: 105px auto 0;
+}
+.contenido p{
+	font-weight: 300;
+	text-indent: 10px;
+}
+
+.toggle-menu{
+	display: none;
+	width: 40px;
+	height: 40px;
+
+	line-height: 70px;
+	vertical-align: middle;
+
+	background-image: url('../img/icon-menu.svg');
+	background-color: red;
+	-webkit-background-size: 30px;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+@media screen and (max-width: 767px){
+	.header{
+		line-height: 70px;
+	}
+	.header .menu{
+		display: none;
+	}
+	.header .menu li{
+		color:  pink;
+	}
+
+	.toggle-menu{
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
