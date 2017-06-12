@@ -39,7 +39,7 @@ body{
 /*	
 	RELATIVE
 	sus coordenadas t,r,b,l se calculan respecto
-	a su posicion original en el flujo
+	a su posicion original en el flujo(NO pierde su espacio en el flujo)
 */
 .contenedor .rel{
 	background-color: green;
@@ -57,7 +57,7 @@ body{
 /***
 	ABSOLUTE
 	se calcula desde su ancestro más cercano
-	que esté posicionado
+	que esté posicionado. (pierde su espacio en el flujo).
 ***/
 .contenedor .abs{
 	background-color: yellow;
@@ -76,6 +76,7 @@ body{
 /***
 	FIXED
 	se calcula desde el viewport del navegador
+	(pierde su espacio en el flujo).
 ***/
 .contenedor .fix{
 	background-color: blueviolet;
@@ -124,7 +125,7 @@ body{
 .ctn--medidas p {
 	margin: 1em 0;
 }
-.ctn--medidas p:last-child {
+.ctn--medidas p:last-child { /*Ultimo hijo dque sea un parrafo*/
 	margin-bottom: 0;
 }
 
