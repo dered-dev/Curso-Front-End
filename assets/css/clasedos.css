@@ -2,6 +2,9 @@ body{
 	background-color: whitesmoke;
 	padding-bottom: 100em;
 	font-family: sans-serif;
+	color: #666;
+	background: #f4f4f4;
+	line-height: 1.6em;
 }
 
 .contenedor{
@@ -11,7 +14,6 @@ body{
 	font-size: 20px;
 	padding: 50px;
 	position: relative;
-	top: 100px;
 }
 /*
 	Se considera un elemento posicionado si y solo sí
@@ -21,6 +23,13 @@ body{
 	con position: static, pero no estan posicionados
 	Valores adicionales posibles:
 	position: initial || inherit;
+	propiedades que se activan al posicionar
+	un elemento:
+		left
+		right
+		boottom
+		top
+		z-index
 */
 
 /*	
@@ -76,6 +85,79 @@ body{
 	top: 40px;
 	right: 0;
 }
+
+
+/*** UNIDADES DE MEDIDA
+	Absoluta: 	está completamente definida, ya que su valor no depende
+				de otro valor de referencia.
+		px = pixeles
+		pc = picas
+		in = pulgadas
+		cm = centimetros
+		pt = puntos
+		mm = milimetros
+
+	Relativas: 	su valor siempre está referenciado respecto a otro valor.
+		em 	= 	Se calcula respecto al tamaño de letra del elemento(RECUERDA: el
+				tamaño de letra se hereda y depende del padre).
+				HTML = font-size: 16px; en todos los navegadores, excepto IE8 hacia abajo
+				Body = 1em (16px)
+				Hijo = 1.3em (16px x 1.3 = 20.8px)
+				Nieto = 1.3em (20.8px x 1.3 = 27.04px)
+		rem =	Se calcula respecto al tamaño de fuente del elemento root (HTML).
+		% 	=	Se calcula respecto al tamaño de fuente 
+
+*/
+
+
+
+.ctn--medidas h1 {
+	margin: 0 0 1em 0;
+	line-height: 1.4em;
+}
+
+.ctn--medidas p {
+	margin: 1em 0;
+}
+.ctn--medidas p:last-child {
+	margin-bottom: 0;
+}
+
+.ctn--medidas img {
+	max-width: 100%;
+	height: auto;
+}
+
+.ctn--medidas {
+	margin: 1rem auto;
+	width: 80%;
+	max-width: 75rem;
+	
+	background: white;
+	padding: 2em;
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+@media only screen and ( max-width: 45rem ) {
+	.ctn--medidas {
+		width: 90%;
+		font-size: 0.9em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
