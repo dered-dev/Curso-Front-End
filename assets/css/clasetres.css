@@ -1,0 +1,156 @@
+body{
+	margin: 0;
+	background-color: whitesmoke;
+	padding: 2em;
+	font-family: 'Poppins', sans-serif;
+	color: #384047;
+}
+*{
+	box-sizing: border-box;
+}
+.group{
+	padding: 3em 2em;
+}
+.group:nth-of-type(2n+1){
+	background-color: #b8f5d2;
+	padding: 3em 2em;
+}
+
+/*
+	Selecciona todos los elementos que no tenga contenido 
+	(texto, Y/0 child)
+*/
+.empty span:empty,
+.empty .vacio:empty {
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	display: inline-block;
+	margin:  10px 15px;
+}
+
+/**
+ * 	Pseudo elemento ::before
+ *	Inserta texto y/o un elemento antes del contenido del elemento seleccionado
+ *	Se usa la propiedad content:""; para indicar el contenido
+ *
+ 	::before {
+    	css declarations;
+	}
+ */	
+
+
+.before h1{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	
+}
+.before h1::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	margin:  0 10px;
+	padding: 3px;
+
+	background-color: yellow;
+	border-radius: 50%;
+	display: inline-block;
+}
+/**
+ * 	Pseudo elemento ::after
+ *	Inserta texto y/o un elemento despues del contenido del elemento seleccionado
+ *	Se usa la propiedad content:""; para indicar el contenido
+ *
+ 	::after {
+    	css declarations;
+	}
+ */	
+.after h1::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	margin:  0 10px;
+	padding: 3px;
+	
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:  auto;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	transform: translate(23px, 0);
+}
+
+/**
+ * 	Pseudo elemento ::first-letter
+ *	Es usado para agregar estilos a la primera letra del elemento seleccionado
+ *
+ 	::first-letter {
+    	css declarations;
+	}
+*/
+
+.first-letter h1::first-letter{
+	text-transform: uppercase;
+	font-size: 4em;
+}
+
+/**
+ * 	Pseudo elemento ::first-line
+ *	Es usado para agregar estilos a
+ *
+ 	::first-line {
+    	css declarations;
+	}
+*/
+.first-line p::first-line{
+	text-transform: uppercase;
+	font-size: 4em;
+}
+/**
+ * 	Pseudo clase ::focus
+ *	Es usado para agregar estilos a
+ *
+ 	::first-letter {
+    	css declarations;
+	}
+*/
+.focus *:focus{
+	border: 10px solid green;
+}
+.active a:hover{
+	color: yellow
+}
+.active a:active{
+	color: pink;
+	cursor: pointer;
+}
+.hover p:hover{
+	color: gold;
+}
+.selection p::selection{
+	background-color: red;
+	color: white;
+}
+.nth ul li:nth-of-type(2n+4){
+	color: red;
+}
+.nth ul li:nth-child(1){
+	color: green;
+}
+.nth ul li:first-child{
+	font-weight: bold;
+	color: aquamarine;
+}
+.nth li:last-child{
+	font-weight: bold;
+}
+
+
+
+
+
