@@ -5,6 +5,15 @@ body{
 	font-family: 'Poppins', sans-serif;
 	color: #384047;
 }
+/*
+*	Propiedad utilizada para indicar si el padding y borde
+*	incrementan el tamaño del elemento.
+*	posibles valores:
+*	box-sizing:
+*	border-box;  == incluye el padding y borde para calcular el ancho/alto de un elemento
+*	content-box; == valor por defecto
+					padding y borde suman al ancho/alto del elemento
+*/
 *{
 	box-sizing: border-box;
 }
@@ -101,7 +110,7 @@ body{
 
 /**
  * 	Pseudo elemento ::first-line
- *	Es usado para agregar estilos a
+ *	Es usado para agregar estilos a la primera linea de texto
  *
  	::first-line {
     	css declarations;
@@ -113,39 +122,116 @@ body{
 }
 /**
  * 	Pseudo clase ::focus
- *	Es usado para agregar estilos a
- *
- 	::first-letter {
+ *	Es usado para seleccionar al alemento que tenga el foco. 
+ *	
+ 	:focus {
     	css declarations;
 	}
 */
-.focus *:focus{
+.focus input:focus{
 	border: 10px solid green;
 }
-.active a:hover{
-	color: yellow
-}
+/**
+ * 	Pseudo clase :active
+ *	Es usado para seleccionar un link, buttton, cuando este dispara
+ *	el evento de clic
+ *	
+ 	:active {
+    	css declarations;
+	}
+*/
 .active a:active{
 	color: pink;
 	cursor: pointer;
 }
+/* Se dispara primero la pseudo clase :hover antes que el :active */
+.active a:hover{
+	color: yellow
+}
+
+/**
+ * 	Pseudo clase :hover
+ *	Es usado para seleccionar al elemento cuando el cursor
+ *	se coloca sobre él.
+ *	
+ 	:hover {
+    	css declarations;
+	}
+*/
 .hover p:hover{
 	color: gold;
 }
+/**
+ * 	Selector ::selection
+ *	Es usado para seleccionar la porción de texto seleccionada por el usuario
+ *	
+ 	::selection {
+    	css declarations;
+	}
+*/
 .selection p::selection{
 	background-color: red;
 	color: white;
 }
+
+/**
+ * 	Selector :nth-of-type()
+ *	Es usado para seleccionar uno o más elementos basado en el orden de los elementos
+ *	de acuerdo a una formula
+ *	odd => impar , even => par, (an + b)
+ *	Donde: 
+ *	a = valor entero
+ *	n = Letra n
+ *	+ 0 - = operador
+ *	b = valor entero si y solo si se incluye un operador despues de n
+ *	p.ej. 4n = (4x0, 4x1, 4x2, 4x3, etc) =  4,8,12, etc	
+ *
+ 	:nth-of-type {
+    	css declarations;
+	}
+*/
 .nth ul li:nth-of-type(2n+4){
 	color: red;
 }
+/**
+ * 	Selector :nth-child()
+ *	Es usado para seleccionar uno o más elementos basado en el orden de los elementos
+ *	de acuerdo a una formula
+ *	odd => impar , even => par, (an + b)
+ *	Donde: 
+ *	a = valor entero
+ *	n = Letra n
+ *	+ 0 - = operador
+ *	b = valor entero si y solo si se incluye un operador despues de n
+ *	p.ej. 4n = (4x0, 4x1, 4x2, 4x3, etc) =  4,8,12, etc	
+ *
+ 	:nth-child {
+    	css declarations;
+	}
+*/
 .nth ul li:nth-child(1){
 	color: green;
 }
+/**
+ * 	Selector :first-child()
+ *	Es usado para seleccionar el primer elemento del tipo indicado
+ *
+ 	:first-child {
+    	css declarations;
+	}
+*/
 .nth ul li:first-child{
 	font-weight: bold;
 	color: aquamarine;
 }
+/**
+ * 	Selector :last-child()
+ *	Es usado para seleccionar el ultimo elemento del tipo indicado
+ *
+ 	:last-child {
+    	css declarations;
+	}
+*/
 .nth li:last-child{
 	font-weight: bold;
 }
