@@ -1,0 +1,90 @@
+.banner{
+	width: 700px;
+	height: 350px;
+	margin-bottom: 20rem;
+	border: 3px solid blue;
+	margin: auto;
+
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation-name: banner;
+	animation-duration:  10s;
+	/* animation-iteration-count: 3; */
+	animation-iteration-count: infinite;
+	/* animation-direction: normal|reverse|alternate|alternate-reverse; */
+	animation-direction: alternate;
+	/* animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out; */
+	animation-timing-function: ease-out;
+}
+
+@keyframes banner{
+	0%,30%{
+		background-image: url('../img/slides/slide1.jpeg');
+		opacity: 1;
+	}
+	
+	31%,34%{
+		opacity: 0.1;
+	}
+
+	35%,65%{
+		background-image: url('../img/slides/slide2.jpeg');
+		opacity: 1;
+	}
+
+	66%,69%{
+		opacity: 0.1;
+	}
+
+	70%,100%{
+		background-image: url('../img/slides/slide3.jpeg');
+		opacity: 1;
+	}
+}
+
+
+.slider{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+.slider ul{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	width: 400%;
+	animation: slide 20s infinite;
+	/* animation-direction: normal|alternate|reverse|alternate-reverse; */
+	animation-direction: alternate-reverse;
+}
+
+/*
+animation-name: nombre de la animacion;
+animation-duration: seg o miliseg ;
+animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|;
+animation-delay: time seconds;
+animation-iteration-count: number|infinite;
+animation-direction: normal|reverse|alternate|alternate-reverse|;
+
+*/
+.slider ul li{
+	width: 100%;
+	list-style: none;
+}
+.slider img{
+	width: 100%;
+}
+
+@keyframes slide {
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}

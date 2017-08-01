@@ -1,0 +1,37 @@
+ /* datos a saber */
+ /* proporcion 16:9 
+		(500/16)*9
+ 		w= 500px;
+ 		h= 281px;ç
+
+
+ 		16:9
+ 		16 = 100%
+ 		9  = 56.25%;
+
+ 		4:3
+ 		4 = 100
+ 		3 = 75%;
+ */
+body{
+	margin: 0;
+}
+/* .grid{
+	width: 20%;
+} */
+.video__contianer{
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /*16:9*/
+	position: relative;
+}
+.video__contianer iframe,
+.video__contianer object,
+.video__contianer embed{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
